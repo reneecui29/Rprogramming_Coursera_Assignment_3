@@ -1,3 +1,7 @@
+## These 2 functions will cache a matrix, and, if unchanged, retrieve 
+## the already calculated inverse of that matrix quickly.
+
+## This first function creates a matrix that can "cache" its inverse
 makeCacheMatrix <- function(x = matrix()) {
 m<-NULL  
 evn <- environment()  
@@ -20,6 +24,8 @@ getenv = getenv)
 
 }
 
+## If above matrix is calculated and unchanged, this function should
+## retrieve the inverse of the matrix.
 
 cacheSolve <- function(xMat= m(), ...) {
 	m <- xMat$getinverse() 
